@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../untitled folder 2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "php web"
+	}
+}
