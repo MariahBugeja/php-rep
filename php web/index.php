@@ -1,17 +1,8 @@
 <?php
 include 'includes/header.php';
-$servername = "localhost:8889";
-$username = "Mariah03";
-$password = "School2024";
-$dbname = "Mariah";
+include 'includes/dp.php';
+?>
 
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 <html>
     <head>
     <link rel="stylesheet" href="style.css"> 
@@ -114,3 +105,7 @@ if ($conn->connect_error) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+
+?>
