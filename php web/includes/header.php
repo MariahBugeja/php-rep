@@ -26,14 +26,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Customize your own</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Favorites</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="basket.php">Add to Basket</a>
+                        <a class="nav-link" href="basket.php">Basket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
