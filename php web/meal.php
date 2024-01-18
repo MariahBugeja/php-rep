@@ -11,6 +11,8 @@ include 'dp.php';
     <title>Meals</title>
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="script.js"></script> 
 </head>
 <body>
 
@@ -24,43 +26,45 @@ include 'dp.php';
 </div>
 
 <div class="container mt-5 text-center mb-4" id="nav-links-container">
-    <a href="" class="nav-link selected">Savoury</a>
+    <a href="#" class="nav-link category-link selected" data-category="Savoury">Savoury</a>
     <span class="divider">|</span>
-    <a href="shopping copy.html" class="nav-link">Desserts</a>
+    <a href="#" class="nav-link category-link" data-category="Dessert">Desserts</a>
 </div>
+
 
 <div class="container">
     <div class="row">
 
-    <?php
-    $sql = "SELECT * FROM Products";
-    $result = $conn->query($sql);
+        <?php
+        //  items based on selected category
+        $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'Savoury';
+        $sqlItems = "SELECT * FROM Products WHERE category = '$selectedCategory'";
+        $resultItems = $conn->query($sqlItems);
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="col-md-4 mb-4">';
-            echo '<a href="product.php?id=' . $row['id'] . '">';
-            echo '<img src="' . $row['Imageurl'] . '" alt="' . $row['Name'] . '" class="img-fluid productimg" style="border-radius: 20px;">';
-            echo '</a>';
-            echo '<h5 class="producttitle">' . $row['Name'] . '</h5>';
-            echo '<p>' . $row['description'] . '</p>';
-            echo '<p>$' . $row['Price'] . '</p>';
-            echo '<button class="btn btn-primary">Add to Basket</button>';
-            echo '</div>';
+        if ($resultItems->num_rows > 0) {
+            while ($row = $resultItems->fetch_assoc()) {
+                echo '<div class="col-md-4 mb-4">';
+                echo '<a href="product.php?id=' . $row['id'] . '">';
+                
+                echo '<img src="' . $row['Imageurl'] . '" alt="' . $row['Name'] . '" class="img-fluid productimg" style="border-radius: 20px;">';
+                echo '</a>';
+                echo '<h5 class="producttitle">' . $row['Name'] . '</h5>';
+                echo '<p>' . $row['description'] . '</p>';
+                echo '<p>$' . $row['Price'] . '</p>';
+echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '&redirect=basket.php">Add to Basket</a>';
+                echo '</div>';
+            }
+        } else {
+            echo "No products found for category: $selectedCategory";
         }
-    } else {
-        echo "No products found";
-    }
-
-    $conn->close();
-    ?>
-
+        ?>
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 
 </body>
 </html>

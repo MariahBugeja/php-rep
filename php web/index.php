@@ -42,7 +42,7 @@ include 'includes/dp.php';
                     <div class="text-content">
                         <h2>Discover Our Healthy Meals</h2>
                         <p class="MIDDLETEXT">Choose from a variety of delicious and nutritious meals prepared with fresh ingredients. We offer the best in healthy eating options that cater to your taste and preferences.</p>
-                        <a href="shopping.html" class="rectangular-button">View Menu</a>
+                        <a href="meal.php" class="rectangular-button">View Menu</a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
    
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="assets/logo.png" alt="Your Logo" class="custom-logo">
             </a>
             
@@ -29,12 +29,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">About us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Favorites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="basket.php">Add to Basket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                   
                 </ul>
             </div>
         </div>
     </nav>
-
-    
 
 </body>
 </html>

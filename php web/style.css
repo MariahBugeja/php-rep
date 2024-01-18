@@ -118,3 +118,29 @@ font-size: 50px;
     padding-top: 10px;
 }
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+
+
+.basket-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.basket-item img {
+    width: 100px; 
+    margin-right: 10px;
+}
+
+.quantity {
+    width: 40px;
+    text-align: center;
+}
+
+.delete-btn {
+    margin-left: auto; 
+}
