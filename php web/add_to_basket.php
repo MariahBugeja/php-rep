@@ -37,7 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     }
                 }
             } else {
-                // Database error
                 echo "database_error";
             }
         } else {

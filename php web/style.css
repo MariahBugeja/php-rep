@@ -241,6 +241,84 @@ font-size: 50px;
     color: #fff;
 }
 
+
+.basket-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.basket-summary {
+    margin-bottom: 20px;
+}
+
+.basket-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.title-description {
+    flex-grow: 1;
+}
+
+.quantity-delete {
+    margin-left: auto;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+.quantity-price-delete {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+
+
 /* not working*/
 
 .add-to-favorites-btn {

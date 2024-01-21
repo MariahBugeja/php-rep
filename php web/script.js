@@ -6,5 +6,9 @@ $(document).ready(function() {
         var url = new URL(window.location.href);
         url.searchParams.set('category', selectedCategory);
         window.location.href = url.toString();
-    });
-}
+    }
+)});
+
+
+
+

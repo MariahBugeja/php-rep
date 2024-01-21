@@ -23,9 +23,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="meal.php">Meal</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Customize your own</a>
-                    </li>
+                 
                     
                     <li class="nav-item">
                         <a class="nav-link" href="favorites.php">Favorites</a>
