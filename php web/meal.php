@@ -47,28 +47,20 @@ session_start();
         if ($resultItems->num_rows > 0) {
             while ($row = $resultItems->fetch_assoc()) {
                 echo '<div class="col-md-4 mb-4">';
-                echo '<a href="product.php?id=' . $row['id'] . '">';
-                
+                echo '<a href="product.php?id=' . $row['productsid'] . '">';
                 echo '<img src="' . $row['Imageurl'] . '" alt="' . $row['Name'] . '" class="img-fluid productimg" style="border-radius: 20px;">';
                 echo '</a>';
                 echo '<h5 class="producttitle">' . $row['Name'] . '</h5>';
                 echo '<p>' . $row['description'] . '</p>';
                 echo '<p>$' . $row['Price'] . '</p>';
                 
-
-                
                 if (isset($_SESSION['user_id'])) {
                     // User is logged in
-                    echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '">Add to Basket</a>';
+                    echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '" class="add-to-basket-btn">Add to Basket</a>';
                 } else {
                     // User is not logged in, provide a login link or redirect to login page
-                    echo '<a href="login.php">Login to Add to Basket</a>';
+                    echo '<a href="login.php"> Add to Basket</a>';
                 }
-                
-                
-
-
-                
                 echo '</div>';
             }
         } else {
