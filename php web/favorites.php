@@ -3,8 +3,6 @@ session_start();
 
 include 'includes/header.php'; 
 include 'dp.php'; 
-
-// Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -31,7 +29,7 @@ $resultFavorites = $conn->query($sqlFavorites);
 
 <body>
 
-<?php include 'includes/favorites.php';  ?>
+<?php include 'includes/navigation.php';  ?>
 
 <div class="container mt-5">
     <div class="row">
@@ -55,7 +53,8 @@ $resultFavorites = $conn->query($sqlFavorites);
                 echo '<h5 class="producttitle">' . $row['Name'] . '</h5>';
                 echo '<p>' . $row['description'] . '</p>';
                 echo '<p>$' . $row['Price'] . '</p>';
-                echo '<a href="add_to_favorites.php?action=add&id=' . $row['productsid'] . '" class="add-to-favorites-btn ' . (isFavorite($row['productsid']) ? 'selected' : '') . '"><i class="fas fa-heart"></i></a>';
+                // remove from favorites if needed
+                echo '<a href="remove_from_favorites.php?id=' . $row['productsid'] . '">Remove from Favorites</a>';
                 echo '</div>';
             }
         } else {
