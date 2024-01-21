@@ -145,53 +145,98 @@ font-size: 50px;
     margin-left: auto; 
 }
 
+/* css for the login */
 
 
-
-.registration-container {
-    font-family: Arial, sans-serif;
-    background-color: #d92b2b;
+.custom-body {
     margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ececec;
+}
+
+.custom-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
-.registration-form {
+.custom-split {
+    flex: 1;
+    overflow: hidden;
+}
+
+.custom-left {
+    background: url('assets/1.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.custom-right {
+    background-color: #3498db;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-form-container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
 }
 
-.registration-label {
+.custom-form-container h2 {
+    color: #333;
+}
+
+.custom-form-container label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
 }
 
-.registration-input {
+.custom-form-container input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-.registration-submit {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
-}
-
-.registration-submit:hover {
-    background-color: #45a049;
-}
-
-.registration-error {
-    color: red;
+    padding: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.custom-submit-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.custom-submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.custom-error {
+    color: #d9534f;
+    margin-top: 10px;
+}
+
+.custom-success {
+    color: #5cb85c;
+    margin-top: 10px;
+}
+
+.custom-link {
+    margin-top: 10px;
+    color: #fff;
 }

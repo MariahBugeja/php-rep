@@ -1,4 +1,3 @@
-
 <?php
 include 'includes/header.php';
 include 'dp.php'; 
@@ -17,6 +16,10 @@ include 'dp.php';
 </head>
 <body>
 
+<?php
+session_start();
+?>
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12 mb-4 text-center oinktext">
@@ -31,7 +34,6 @@ include 'dp.php';
     <span class="divider">|</span>
     <a href="#" class="nav-link category-link" data-category="Dessert">Desserts</a>
 </div>
-
 
 <div class="container">
     <div class="row">
@@ -52,7 +54,21 @@ include 'dp.php';
                 echo '<h5 class="producttitle">' . $row['Name'] . '</h5>';
                 echo '<p>' . $row['description'] . '</p>';
                 echo '<p>$' . $row['Price'] . '</p>';
-echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '&redirect=basket.php">Add to Basket</a>';
+                
+
+                
+                if (isset($_SESSION['user_id'])) {
+                    // User is logged in
+                    echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '">Add to Basket</a>';
+                } else {
+                    // User is not logged in, provide a login link or redirect to login page
+                    echo '<a href="login.php">Login to Add to Basket</a>';
+                }
+                
+                
+
+
+                
                 echo '</div>';
             }
         } else {
@@ -64,8 +80,6 @@ echo '<a href="add_to_basket.php?action=add&id=' . $row['productsid'] . '&redire
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 
 </body>
 </html>
