@@ -99,6 +99,9 @@ if (!$basketResult) {
 
 <script src="script.js"></script>
 
+
+<script src="script.js"></script>
+
 <script>
 function deleteItem(basketId) {
     var xhr = new XMLHttpRequest();
@@ -108,7 +111,7 @@ function deleteItem(basketId) {
                 var deletedItem = document.getElementById('basket-item-' + basketId);
                 if (deletedItem) {
                     deletedItem.remove();
-                    recalculateTotal();
+                    recalculateTotal(); // Call the function to recalculate the total after deletion
                 } else {
                     console.error('Deleted item not found in the DOM.');
                 }
@@ -136,6 +139,8 @@ function recalculateTotal() {
         totalElement.innerText = '$' + totalPrice.toFixed(2);
     }
 }
+</script>
+
 
 
 </body>
