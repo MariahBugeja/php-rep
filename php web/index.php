@@ -106,6 +106,4 @@ include 'includes/dp.php';
 </body>
 </html>
 
-<?php
-
-?>
+<?php include 'includes/footer.php'; ?>

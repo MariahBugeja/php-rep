@@ -32,7 +32,7 @@
                         <a class="nav-link" href="basket.php">Basket</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="aboutus.php">About us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="account.php">Account</a>

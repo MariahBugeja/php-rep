@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'dp.php';
+include 'includes/header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,3 +76,4 @@ if ($result->num_rows > 0) {
 
 </body>
 </html>
+<?php include 'includes/footer.php'; ?>

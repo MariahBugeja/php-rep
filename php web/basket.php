@@ -1,6 +1,8 @@
 <?php
 session_start();
 include 'dp.php';
+include 'includes/header.php';
+
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -134,7 +136,8 @@ function recalculateTotal() {
         totalElement.innerText = '$' + totalPrice.toFixed(2);
     }
 }
-</script>
+
 
 </body>
 </html>
+<?php include 'includes/footer.php'; ?>

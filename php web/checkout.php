@@ -91,6 +91,7 @@ $totalPrice = isset($_GET['total_price']) ? floatval($_GET['total_price']) : 0;
         </div>
     </div>
 </div>
+<?php include 'includes/footer.php'; ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
